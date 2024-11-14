@@ -3,41 +3,40 @@
 @url = http://localhost:{{port}}
 
 ### Url para teste após a criação do projeto.
-@name = "Teste get"
+
 GET {{url}}
 ###
-@name = "Listar Seleções"
+
 GET {{url}}/selecoes
 
 ###
-@name = "Buscar Seleção por ID"
+
 GET {{url}}/selecoes/1
 
 ###
-@name = "Inserir uma Seleção"
+
 POST {{url}}/selecoes
 content-type: application/json
 accept: application/json,text/*;q=0.99
 
 {
-    "id": 5,
     "selecao": "Jamaica",
     "grupo": "G"
 }
 
 ###
-@name = "Excluir Seleção por ID"
+
 DELETE {{url}}/selecoes/4
 
 
 ###
-@name = "Atualiza Seleção por ID"
+
 PUT {{url}}/selecoes/1
 content-type: application/json
 accept: application/json,text/*;q=0.99
 
 {
-    "selecao": "Japão",
+    "selecao": "Brasil",
     "grupo": "A"
 }
 
